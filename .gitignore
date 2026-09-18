@@ -1,0 +1,12 @@
+# Local export and visual inspection artifacts.
+.vendor/reveal-md/node_modules/
+.pdf-export/
+.pdf-vector-check/
+.tmp_capture.mjs
+dir-current.png
+
+# Editor and operating-system noise.
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

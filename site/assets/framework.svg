@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" role="img" aria-label="Abstract framework diagram">
+  <rect width="1200" height="540" rx="28" fill="#f7faff"/>
+  <g font-family="Arial,sans-serif" font-weight="700" text-anchor="middle">
+    <rect x="62" y="170" width="210" height="150" rx="18" fill="#eaf2fb" stroke="#b8cde2" stroke-width="3"/><text x="167" y="226" font-size="22" fill="#174a8b">CONTENT</text><text x="167" y="265" font-size="16" fill="#56718d">headline + notes</text>
+    <rect x="350" y="170" width="210" height="150" rx="18" fill="#fffdf8" stroke="#e3d3a8" stroke-width="3"/><text x="455" y="226" font-size="22" fill="#765918">LAYOUT</text><text x="455" y="265" font-size="16" fill="#806f49">grid + spacing</text>
+    <rect x="638" y="170" width="210" height="150" rx="18" fill="#edf6f1" stroke="#bcd8c9" stroke-width="3"/><text x="743" y="226" font-size="22" fill="#1f7a55">STYLE</text><text x="743" y="265" font-size="16" fill="#547b67">color + type</text>
+    <rect x="926" y="170" width="210" height="150" rx="18" fill="#f4eefb" stroke="#d5c2e6" stroke-width="3"/><text x="1031" y="226" font-size="22" fill="#684e91">OUTPUT</text><text x="1031" y="265" font-size="16" fill="#746485">web + PDF</text>
+  </g>
+  <g fill="none" stroke="#174a8b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M278 245h54"/><path d="m320 220 28 25-28 25"/><path d="M566 245h54"/><path d="m608 220 28 25-28 25"/><path d="M854 245h54"/><path d="m896 220 28 25-28 25"/></g>
+  <path d="M80 100h1040" stroke="#d4a84f" stroke-width="5" stroke-linecap="round" stroke-dasharray="12 18"/>
+</svg>

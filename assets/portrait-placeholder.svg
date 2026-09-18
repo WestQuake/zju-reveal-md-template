@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" role="img" aria-label="Abstract profile placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf2fb"/>
+      <stop offset="1" stop-color="#fff8e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="520" rx="28" fill="url(#bg)"/>
+  <circle cx="210" cy="192" r="83" fill="#174a8b" opacity=".14"/>
+  <circle cx="210" cy="182" r="56" fill="#174a8b"/>
+  <path d="M106 408c10-84 48-126 104-126s94 42 104 126" fill="#174a8b"/>
+  <circle cx="210" cy="182" r="25" fill="#fff" opacity=".9"/>
+  <path d="M50 454h320" stroke="#d3deeb" stroke-width="3"/>
+  <text x="210" y="486" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#174a8b" letter-spacing="3">PROFILE</text>
+</svg>

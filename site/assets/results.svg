@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Abstract results chart">
+  <rect width="1200" height="500" rx="28" fill="#f7faff"/>
+  <g stroke="#dce6f1" stroke-width="2"><path d="M110 90h1010M110 170h1010M110 250h1010M110 330h1010M110 410h1010"/></g>
+  <path d="M110 410V70" stroke="#174a8b" stroke-width="4"/><path d="M110 410h1010" stroke="#174a8b" stroke-width="4"/>
+  <g fill="#7d9fc7"><rect x="190" y="252" width="110" height="158" rx="8"/><rect x="430" y="192" width="110" height="218" rx="8"/><rect x="670" y="142" width="110" height="268" rx="8"/></g>
+  <rect x="910" y="108" width="110" height="302" rx="8" fill="#d4a84f"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle" font-weight="700"><text x="245" y="448" font-size="18" fill="#56718d">A</text><text x="485" y="448" font-size="18" fill="#56718d">B</text><text x="725" y="448" font-size="18" fill="#56718d">C</text><text x="965" y="448" font-size="18" fill="#765918">BEST</text><text x="600" y="55" font-size="22" fill="#174a8b">ILLUSTRATIVE METRIC</text></g>
+</svg>
