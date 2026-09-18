@@ -57,9 +57,13 @@ make pdf-raster
 | 分割页 | `.section-body`, `.section-title`, `.section-note` | 用于章节过渡页 |
 | 个人或项目信息 | `.profile-layout`, `.profile-card`, `.metric-grid`, `.content-block` | 组合图片、名称、指标和要点 |
 | 并列卡片 | `.feature-grid`, `.feature-card`, `.focus-grid`, `.focus-card` | 展示两个或多个并列模块 |
-| 图片与对比 | `.split-layout`, `.compare-stack`, `.compare-card`, `.media-figure` | 左侧说明、右侧图片或图示 |
+| 图片与媒体 | `.split-layout`, `.compare-stack`, `.compare-card`, `.figure-frame` | 左侧说明、右侧图片和图注；所有图片类型共用这一套容器 |
+| 上下布局 | `.stack-layout`, `.stack-visual`, `.stack-points`, `.stack-point` | 上方放主视觉，下方排列四个要点 |
+| 左右布局 | `.layout-split`, `.layout-panel` | 并列展示背景与结果、问题与回答等内容 |
+| 三栏布局 | `.task-grid`, `.task-card` | 展示三个并列阶段或信息模块 |
+| 复合布局 | `.composite-layout`, `.composite-main`, `.composite-side` | 组合主内容、侧栏提示和补充信息 |
 | 任务卡片 | `.task-grid`, `.task-card`, `.stat-strip`, `.info-list` | 展示任务、指标和补充说明 |
-| 图片或图表 | `.figure-frame`, `.figure-caption` | 统一图片尺寸、边框和图注 |
+| 图片或图表 | `.figure-frame`, `.figure-caption` | 框架图、数据图表和分析图都使用同一个媒体容器 |
 | 流程 | `.process-layout`, `.process-list`, `.process-step`, `.process-cards` | 表达有明确先后顺序的步骤 |
 | 表格 | `.table-layout`, `.table-card`, `.comparison-table` | 展示结构化信息或方案对比 |
 | 验证与结论 | `.verify-layout`, `.verify-row`, `.verify-table`, `.verify-conclusion` | 组织输入、证据、输出和下一步 |
@@ -74,13 +78,15 @@ make pdf-raster
 
    ```html
    <div class="figure-frame">
-     <img src="assets/example.svg" alt="示例图" />
+     <img src="assets/overview.svg" alt="示例图" />
      <div class="figure-caption">一句简短的图片说明。</div>
    </div>
    ```
 
-4. 图片应当服务于一个明确观点，并配合 `.figure-caption` 或 `.media-caption` 写出简短说明。
+4. 图片应当服务于一个明确观点，并配合 `.figure-caption` 写出简短说明。框架图、数据图表和分析图不需要分别建立新的 CSS 容器。
 5. 如果一个页面同时包含太多模块，优先拆成多个页面，而不是继续缩小字体。
+
+验证页默认使用紧凑版 `.verify-layout`，没有额外说明时，两行验证内容会自然靠近。如果在两行之间加入解释文字，或希望保留更明显的上下呼吸空间，可以改用 `.verify-layout--spacious`。
 
 项目中的 SVG 示例图是抽象占位素材，可以直接替换为自己的图表或插图。浙江大学 logo 属于模板品牌元素，建议保留并使用 `alt` 文本。
 

@@ -4,6 +4,7 @@
 .pdf-vector-check/
 .tmp_capture.mjs
 dir-current.png
+.vscode
 
 # Editor and operating-system noise.
 .DS_Store

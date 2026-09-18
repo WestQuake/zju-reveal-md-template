@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" role="img" aria-label="Abstract comparison table">
-  <rect width="1200" height="470" rx="28" fill="#f7faff"/>
-  <rect x="100" y="74" width="1000" height="320" rx="14" fill="#fff" stroke="#d6e1ee" stroke-width="3"/>
-  <path d="M100 148h1000M100 230h1000M100 312h1000M430 74v320M760 74v320" stroke="#d6e1ee" stroke-width="3"/>
-  <rect x="100" y="74" width="1000" height="74" rx="14" fill="#eaf2fb"/><rect x="760" y="74" width="340" height="320" rx="0" fill="#fffdf8" opacity=".8"/>
-  <g font-family="Arial,sans-serif" font-size="21" font-weight="700" fill="#174a8b"><text x="160" y="121">ITEM</text><text x="520" y="121">OPTION A</text><text x="850" y="121" fill="#765918">OPTION B</text><text x="160" y="200">Speed</text><text x="520" y="200">standard</text><text x="850" y="200" fill="#765918">fast</text><text x="160" y="282">Detail</text><text x="520" y="282">compact</text><text x="850" y="282" fill="#765918">rich</text><text x="160" y="364">Use</text><text x="520" y="364">overview</text><text x="850" y="364" fill="#765918">decision</text></g>
-</svg>

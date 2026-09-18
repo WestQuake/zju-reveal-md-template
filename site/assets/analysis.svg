@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Abstract analysis chart">
-  <rect width="1200" height="500" rx="28" fill="#f7faff"/>
-  <circle cx="300" cy="250" r="135" fill="none" stroke="#e6edf5" stroke-width="48"/>
-  <circle cx="300" cy="250" r="135" fill="none" stroke="#174a8b" stroke-width="48" stroke-dasharray="350 498" transform="rotate(-90 300 250)"/>
-  <circle cx="300" cy="250" r="135" fill="none" stroke="#d4a84f" stroke-width="48" stroke-dasharray="185 663" stroke-dashoffset="-350" transform="rotate(-90 300 250)"/>
-  <circle cx="300" cy="250" r="82" fill="#fff"/><text x="300" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#174a8b">BREAKDOWN</text><text x="300" y="275" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#56718d">example only</text>
-  <g font-family="Arial,sans-serif"><rect x="620" y="150" width="24" height="24" rx="5" fill="#174a8b"/><text x="670" y="171" font-size="23" fill="#174a8b" font-weight="700">Category A</text><rect x="620" y="225" width="24" height="24" rx="5" fill="#d4a84f"/><text x="670" y="246" font-size="23" fill="#765918" font-weight="700">Category B</text><rect x="620" y="300" width="24" height="24" rx="5" fill="#e6edf5"/><text x="670" y="321" font-size="23" fill="#56718d" font-weight="700">Category C</text></g>
-</svg>

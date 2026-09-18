@@ -42,7 +42,7 @@
     <div class="agenda-index">01</div>
     <div class="agenda-item">基础布局与信息容器</div>
     <div class="agenda-index">02</div>
-    <div class="agenda-item">图片、图表与卡片容器</div>
+    <div class="agenda-item">页面布局与媒体容器</div>
     <div class="agenda-index">03</div>
     <div class="agenda-item">流程、表格与验证容器</div>
   </div>
@@ -134,42 +134,81 @@
 <div class="slide-frame slide-frame--section">
   <div class="section-eyebrow">02 视觉组件 · Visual Components</div>
   <div class="section-body">
-    <div class="section-title">图片与图表容器</div>
-    <div class="section-note">图片只保留抽象示例，替换时请同时更新说明和结论。</div>
+    <div class="section-title">页面布局与媒体容器</div>
+    <div class="section-note">先选择页面结构，再把文字、表格或图片放入对应区域。</div>
   </div>
 </div>
 
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">2.1 图片说明容器</h2>
+  <h2 class="page-title">2.1 媒体容器</h2>
   <div class="split-layout">
     <div class="compare-stack">
       <div class="compare-card">
         <div class="compare-title">图片使用方式</div>
         <div class="compare-row"><b>文件</b><span>放入 assets 文件夹</span></div>
         <div class="compare-row"><b>引用</b><span>使用相对路径</span></div>
-        <div class="compare-row"><b>说明</b><span>补充一句结论</span></div>
+        <div class="compare-row"><b>替换</b><span>保留 alt 文本并同步更新说明</span></div>
       </div>
-      <div class="compare-switch">从图片到观点</div>
       <div class="compare-card compare-card--accent">
-        <div class="compare-title">排版提示</div>
-        <div class="compare-row"><b>避免</b><span>图片占满页面却没有重点</span></div>
-        <div class="compare-row"><b>推荐</b><span>保留留白并突出关键信息</span></div>
+        <div class="compare-title">配文方式</div>
+        <div class="compare-row"><b>标题</b><span>说明图片展示的对象</span></div>
+        <div class="compare-row"><b>图注</b><span>补充读者需要关注的结论</span></div>
       </div>
     </div>
-    <div class="media-figure">
+    <div class="figure-frame">
       <img src="assets/overview.svg" alt="Abstract overview diagram" />
-      <div class="media-caption">Input → Context → Output</div>
+      <div class="figure-caption">一张图对应一个观点，图片下方保留一句说明。</div>
     </div>
   </div>
-  <div class="callout">每张图都应该服务于一个明确观点；不能帮助读者理解的图片可以删掉。</div>
+  <div class="callout">框架图、数据图表和分析图都可以复用这个媒体容器，不需要为每种图片单独建立一套页面。</div>
 </div>
 
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">2.2 三列任务卡片</h2>
+  <h2 class="page-title">2.2 上下布局结构</h2>
+  <div class="stack-layout">
+    <div class="stack-visual">
+      <div class="stack-visual__label">图片 / 图表区域</div>
+      <div class="stack-visual__path">assets/example.svg</div>
+    </div>
+    <div class="stack-points">
+      <div class="stack-point"><b>01 内容</b><span>标题和核心信息</span></div>
+      <div class="stack-point"><b>02 证据</b><span>一个关键数字或观察</span></div>
+      <div class="stack-point"><b>03 解释</b><span>一句话说明原因</span></div>
+      <div class="stack-point"><b>04 结论</b><span>读者应该记住的内容</span></div>
+    </div>
+  </div>
+  <div class="layout-note">上方放一块主视觉区域，下方用四个同宽要点补充阅读线索。把图片替换进去即可恢复原始的“上图下卡片”结构。</div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">2.3 左右布局结构</h2>
+  <div class="layout-split">
+    <div class="layout-panel">
+      <div class="layout-panel__label">LEFT · CONTEXT</div>
+      <div class="layout-panel__title">背景与输入</div>
+      <div class="layout-panel__line">放置问题、限制条件或已有信息。</div>
+      <div class="layout-panel__line">正文保持短句，避免挤压右侧重点。</div>
+    </div>
+    <div class="layout-panel layout-panel--gold">
+      <div class="layout-panel__label">RIGHT · OUTPUT</div>
+      <div class="layout-panel__title">结果与结论</div>
+      <div class="layout-panel__line">放置一条观察、一个结论或下一步。</div>
+      <div class="layout-panel__line">用金色强调需要读者带走的信息。</div>
+    </div>
+  </div>
+  <div class="layout-note">左右布局适合表达“背景—结果”“问题—回答”或“方法—结论”等关系。</div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">2.4 三栏布局结构</h2>
   <div class="task-grid">
     <div class="task-card">
       <div class="task-header"><div class="task-name">基础</div><div class="task-index">01</div></div>
@@ -205,25 +244,25 @@
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">2.3 图片与图表框架</h2>
-  <div class="figure-frame"><img src="assets/framework.svg" alt="Abstract framework diagram" /></div>
-  <div class="figure-caption">框架图容器：使用一张图说明结构，再用一句话解释阅读顺序。</div>
-</div>
-
-<!--v-->
-
-<div class="slide-frame slide-frame--page">
-  <h2 class="page-title">2.4 数据图表容器</h2>
-  <div class="figure-frame"><img src="assets/results.svg" alt="Abstract results chart" /></div>
-  <div class="callout">图表中的数字仅用于展示排版方式；替换时请同步更新标题、单位、图例和结论。</div>
-</div>
-
-<!--v-->
-
-<div class="slide-frame slide-frame--page">
-  <h2 class="page-title">2.5 分析图容器</h2>
-  <div class="figure-frame"><img src="assets/analysis.svg" alt="Abstract analysis chart" /></div>
-  <div class="figure-caption">分析图容器适合展示构成、分布或类别之间的关系。</div>
+  <h2 class="page-title">2.5 复合布局结构</h2>
+  <div class="composite-layout">
+    <div class="composite-main">
+      <div class="info-banner">
+        <div class="info-banner__title">主内容区域</div>
+        <div class="info-banner__meta">标题 / 背景 / 关键说明</div>
+      </div>
+      <div class="info-list">
+        <div class="info-row"><b>输入</b><span>先交代读者需要知道的背景。</span></div>
+        <div class="info-row info-row--gold"><b>判断</b><span>突出页面最重要的一条观察。</span></div>
+        <div class="info-row info-row--green"><b>输出</b><span>用一句结论承接到下一页。</span></div>
+      </div>
+    </div>
+    <div class="composite-side">
+      <div class="focus-card"><div class="focus-title">侧栏提示</div><div class="focus-note">放置定义、口径或补充信息。</div></div>
+      <div class="focus-card focus-card--gold"><div class="focus-title">视觉重点</div><div class="focus-note">用颜色和留白建立阅读顺序。</div></div>
+    </div>
+  </div>
+  <div class="layout-note">复合布局把主内容、侧栏提示和底部结论放在同一页，适合内容较多但层级清晰的页面。</div>
 </div>
 
 <!--s-->
@@ -252,8 +291,8 @@
         <p>步骤容器适合表达严格的先后顺序，每步只保留一个动作。</p>
       </div>
       <div class="process-card process-card--gold">
-        <img class="process-card__image" src="assets/pipeline.svg" alt="Abstract process pipeline" />
-        <p>图片可以作为流程的辅助说明。</p>
+        <div class="process-card-title">使用规则</div>
+        <p>如果节点没有顺序关系，就改用卡片、矩阵或对比表。</p>
       </div>
     </div>
   </div>
@@ -277,8 +316,10 @@
       </table>
     </div>
     <div class="table-card table-card--accent">
-      <div class="table-card-title">对比图示例</div>
-      <img class="table-illustration" src="assets/comparison.svg" alt="Abstract comparison table" />
+      <div class="table-card-title">阅读规则</div>
+      <div class="table-rule"><b>维度</b><span>只保留会影响选择的项目。</span></div>
+      <div class="table-rule"><b>强调</b><span>用表头和底色突出推荐选项。</span></div>
+      <div class="table-rule"><b>结论</b><span>表格下方写出比较结果。</span></div>
     </div>
   </div>
   <div class="table-conclusion">对比表只保留会影响决策的维度，并用颜色强调推荐选项。</div>
@@ -289,7 +330,7 @@
 <div class="slide-frame slide-frame--page">
   <h2 class="page-title">3.3 验证与结论容器</h2>
   <div class="verify-idea"><b>核心想法</b><span>先提出一个可验证的判断，再用简短证据支持或修正它。</span></div>
-  <div class="verify-layout">
+  <div class="verify-layout verify-layout--compact">
     <div class="verify-flow">
       <div class="verify-row">
         <div class="verify-label">Input</div>
@@ -303,12 +344,13 @@
       </div>
     </div>
     <div class="verify-result">
+      <div class="verify-result__label">结论示例</div>
       <table class="verify-table">
         <thead><tr><th>项目</th><th>示例</th><th>状态</th></tr></thead>
         <tbody>
-          <tr><td>判断</td><td>目标清晰</td><td>通过</td></tr>
-          <tr><td>证据</td><td>信息完整</td><td>通过</td></tr>
-          <tr><td>下一步</td><td>补充细节</td><td>待办</td></tr>
+          <tr><td>判断</td><td>目标清晰</td><td class="table-status table-status--done">通过</td></tr>
+          <tr><td>证据</td><td>信息完整</td><td class="table-status table-status--done">通过</td></tr>
+          <tr><td>下一步</td><td>补充细节</td><td class="table-status table-status--next">待办</td></tr>
         </tbody>
       </table>
     </div>
