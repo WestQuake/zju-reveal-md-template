@@ -266,35 +266,19 @@ revealOptions:
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">2.6 框架图布局结构</h2>
-  <div class="framework-layout">
-    <div class="framework-visual">
-      <div class="framework-node">
-        <span>01 INPUT</span>
-        <strong>背景与历史</strong>
-        <small>汇总用户、任务或环境信息</small>
-      </div>
-      <div class="framework-arrow">→</div>
-      <div class="framework-node framework-node--gold">
-        <span>02 AGENT</span>
-        <strong>理解与执行</strong>
-        <small>生成一个可解释的中间结果</small>
-      </div>
-      <div class="framework-arrow">→</div>
-      <div class="framework-node framework-node--green">
-        <span>03 EVALUATE</span>
-        <strong>反馈与判断</strong>
-        <small>检查结果并决定下一步行动</small>
-      </div>
+  <h2 class="page-title">2.6 框架图容器</h2>
+  <div class="framework-showcase">
+    <div class="framework-image-frame">
+      <img src="assets/overview.svg" alt="Abstract framework placeholder" />
     </div>
     <div class="framework-key">
-      <div class="framework-key-item"><b>输入</b><span>把任务所需的上下文放在流程起点。</span></div>
-      <div class="framework-key-item"><b>主体</b><span>说明模型、方法或系统如何处理信息。</span></div>
-      <div class="framework-key-item"><b>环境</b><span>补充交互对象、工具或运行场景。</span></div>
-      <div class="framework-key-item"><b>输出</b><span>用一句话说明评价结果或下一步。</span></div>
+      <div class="framework-key-item"><b>① 输入模块</b><span>上下文或数据占位符。</span></div>
+      <div class="framework-key-item"><b>② 处理模块</b><span>方法或系统说明占位符。</span></div>
+      <div class="framework-key-item"><b>③ 交互模块</b><span>对象或运行场景占位符。</span></div>
+      <div class="framework-key-item"><b>④ 输出模块</b><span>结果或下一步占位符。</span></div>
     </div>
   </div>
-  <div class="layout-note">框架图适合先展示信息流，再用下方四个说明项解释每个模块的职责。</div>
+  <div class="layout-note">先用图片展示整体结构，再用四个说明项解释模块职责；替换图片即可复用。</div>
 </div>
 
 <!--s-->
@@ -369,34 +353,34 @@ revealOptions:
 
 <div class="slide-frame slide-frame--page">
   <h2 class="page-title">3.3 验证与结论容器</h2>
-  <div class="verify-idea"><b>核心想法</b><span>先提出一个可验证的判断，再用简短证据支持或修正它。</span></div>
+  <div class="verify-idea"><b>核心想法</b><span>验证页主说明或方法摘要占位符。</span></div>
   <div class="verify-layout verify-layout--compact">
     <div class="verify-flow">
       <div class="verify-row">
         <div class="verify-label">Input</div>
         <div class="verify-copy">
-          <div class="verify-copy-title">背景信息与当前问题</div>
-          <div class="verify-copy-sub">明确验证对象</div>
+          <div class="verify-copy-title">输入标题占位符</div>
+          <div class="verify-copy-sub">输入说明占位符</div>
         </div>
-        <div class="verify-target"><b>Evidence</b><br />列出一条关键证据</div>
+        <div class="verify-target"><b>Evidence</b><br />证据说明占位符</div>
       </div>
       <div class="verify-row verify-row--gold">
         <div class="verify-label">Output</div>
         <div class="verify-copy">
-          <div class="verify-copy-title">支持、反对或待确认</div>
-          <div class="verify-copy-sub">写出结论</div>
+          <div class="verify-copy-title">输出标题占位符</div>
+          <div class="verify-copy-sub">输出说明占位符</div>
         </div>
-        <div class="verify-target"><b>Next</b><br />给出下一步行动</div>
+        <div class="verify-target"><b>Next</b><br />下一步说明占位符</div>
       </div>
     </div>
     <div class="verify-result">
-      <div class="verify-result__label">结论示例</div>
+      <div class="verify-result__label">结果示例</div>
       <table class="verify-table">
         <thead><tr><th>项目</th><th>示例</th><th>状态</th></tr></thead>
         <tbody>
-          <tr><td>判断</td><td>目标清晰</td><td class="table-status table-status--done">通过</td></tr>
-          <tr><td>证据</td><td>信息完整</td><td class="table-status table-status--done">通过</td></tr>
-          <tr><td>下一步</td><td>补充细节</td><td class="table-status table-status--next">待办</td></tr>
+          <tr><td>条目 A</td><td>内容占位符</td><td><span class="table-status table-status--done">完成</span></td></tr>
+          <tr><td>条目 B</td><td>补充占位符</td><td><span class="table-status table-status--done">完成</span></td></tr>
+          <tr><td>条目 C</td><td>结果占位符</td><td><span class="table-status table-status--plain">状态占位符</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -431,37 +415,37 @@ revealOptions:
 
 <div class="slide-frame slide-frame--page">
   <h2 class="page-title">3.5 Self-Verify：以验证驱动生成</h2>
-  <div class="verify-idea"><b>核心想法</b><span>让模型先生成 Draft，再用自身的 Verify 判断结果是否可靠，并把判断转成训练信号。</span></div>
+  <div class="verify-idea"><b>核心想法</b><span>页面核心想法或方法摘要占位符。</span></div>
   <div class="verify-hero-layout">
     <div class="verify-process">
-      <div class="verify-section-label"><b>采用 Mix-Train</b><span>联合学习 Draft 与 Verify</span></div>
-      <div class="verify-train-note">Verify 由 GT 监督；用 Self-Verify 代替原本方法中 Draft 的 GT Reward。</div>
+      <div class="verify-section-label"><b>方法组合</b><span>主标题后的补充说明占位符</span></div>
+      <div class="verify-train-note">方法说明或设计动机占位符。</div>
       <div class="verify-training-flow">
         <div class="verify-training-row">
-          <div class="verify-training-head">Draft</div>
-          <div class="verify-training-copy">历史信息 + 模糊任务<br /><b>生成候选结果</b></div>
-          <div class="verify-training-target"><b>Self-Verify</b> = Correct / Incorrect<br />Draft Reward = 1 / 0</div>
+          <div class="verify-training-head">生成</div>
+          <div class="verify-training-copy">输入内容占位符<br /><b>生成结果占位符</b></div>
+          <div class="verify-training-target"><b>判断结果</b> = 状态占位符<br />反馈信号占位符</div>
         </div>
         <div class="verify-training-row verify-training-row--gold">
-          <div class="verify-training-head">Verify</div>
-          <div class="verify-training-copy">读取 Draft 与上下文<br /><b>判断是否符合目标</b></div>
-          <div class="verify-training-target"><b>GT</b> 监督 Verify</div>
+          <div class="verify-training-head">检查</div>
+          <div class="verify-training-copy">读取结果与上下文<br /><b>判断说明占位符</b></div>
+          <div class="verify-training-target"><b>反馈</b> 说明占位符</div>
         </div>
       </div>
     </div>
     <div class="verify-results">
-      <div class="verify-section-label"><b>结果对比</b><span>Reward / Accuracy</span></div>
+      <div class="verify-section-label"><b>结果对比</b><span>指标 / 维度</span></div>
       <table class="verify-result-table">
-        <thead><tr><th>奖励信号</th><th>GT</th><th>Self-Verify</th></tr></thead>
+        <thead><tr><th>指标</th><th>方案 A</th><th>方案 B</th></tr></thead>
         <tbody>
-          <tr><td>Draft Reward</td><td>参考值</td><td>接近参考值</td></tr>
-          <tr><td>判断结果</td><td>监督信号</td><td>自评信号</td></tr>
-          <tr><td>适用方式</td><td>训练 Verify</td><td>辅助训练 Draft</td></tr>
+          <tr><td>指标一</td><td>数值占位</td><td>数值占位</td></tr>
+          <tr><td>指标二</td><td>结果占位</td><td>结果占位</td></tr>
+          <tr><td>指标三</td><td>说明占位</td><td>说明占位</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="verify-conclusion">Self-Verify 让验证结果参与生成训练，同时保留 GT 对 Verify 的监督。</div>
+  <div class="verify-conclusion">页面结论或读者需要记住的要点占位符。</div>
 </div>
 
 <!--v-->
