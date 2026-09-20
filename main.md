@@ -77,6 +77,8 @@ revealOptions:
           <li class="tag-list__item">示例标签二</li>
           <li class="tag-list__item">示例标签三</li>
           <li class="tag-list__item">示例标签四</li>
+          <li class="tag-list__item">示例标签五</li>
+          <li class="tag-list__item">示例标签六</li>
         </ul>
       </div>
       <div class="content-block">
@@ -86,6 +88,8 @@ revealOptions:
           <li class="bullet-list__item">每条内容保持简短清晰</li>
           <li class="bullet-list__item">不需要的条目可以删除</li>
           <li class="bullet-list__item">第四个方框</li>
+          <li class="bullet-list__item">第五个方框</li>
+          <li class="bullet-list__item">第六个方框</li>
         </ul>
       </div>
     </div>
@@ -308,26 +312,26 @@ revealOptions:
 <div class="slide-frame slide-frame--page">
   <h2 class="page-title">3.1 研究动机</h2>
   <div class="motivation-flow">
-    <div class="motivation-node"><div class="motivation-node-title">用户历史</div><div>从行为记录中观察稳定偏好</div></div>
+    <div class="motivation-node"><div class="motivation-node-title">起点占位</div><div>输入信息占位符</div></div>
     <div class="motivation-arrow">→</div>
-    <div class="motivation-node"><div class="motivation-node-title">模糊任务</div><div>“帮我完成一个相关任务”</div></div>
+    <div class="motivation-node"><div class="motivation-node-title">任务占位</div><div>任务描述占位符</div></div>
     <div class="motivation-arrow">→</div>
-    <div class="motivation-node"><div class="motivation-node-title">Draft</div><div>生成一个符合上下文的候选结果</div></div>
+    <div class="motivation-node"><div class="motivation-node-title">候选结果</div><div>输出内容占位符</div></div>
     <div class="motivation-arrow">→</div>
-    <div class="motivation-node motivation-node--gold"><div class="motivation-node-title">Verification</div><div>判断候选结果是否满足目标</div></div>
+    <div class="motivation-node motivation-node--gold"><div class="motivation-node-title">验证步骤</div><div>判断说明占位符</div></div>
   </div>
   <div class="motivation-bottom">
     <div class="motivation-note">
       <div class="case-title">研究背景</div>
-      <div class="motivation-brief-lead">如何让模型从历史行为中提取可复用的偏好？</div>
-      <div class="motivation-brief-row"><b>输入</b><span>用户历史 + 模糊任务</span></div>
-      <div class="motivation-brief-row"><b>难点</b><span>区分偶然行为与稳定偏好</span></div>
-      <div class="motivation-brief-foot"><b>验证能力可以反过来帮助生成能力。</b> 先判断，再改进候选结果。</div>
+      <div class="motivation-brief-lead">研究背景或页面引导语占位符。</div>
+      <div class="motivation-brief-row"><b>输入</b><span>输入内容占位符</span></div>
+      <div class="motivation-brief-row"><b>难点</b><span>问题描述占位符</span></div>
+      <div class="motivation-brief-foot"><b>关键结论占位符。</b> 补充说明占位符。</div>
     </div>
     <div class="research-question">
       <div class="question-lead">核心问题</div>
-      <div class="motivation-question-main">能否让 Verify 判断 Draft 是否合理，并把判断结果转成生成信号？</div>
-      <div class="motivation-question-note">模板提示：把右侧问题替换成你的研究假设、设计目标或页面结论。</div>
+      <div class="motivation-question-main">研究问题或设计目标占位符。</div>
+      <div class="motivation-question-note">问题补充说明占位符。</div>
     </div>
   </div>
 </div>
@@ -335,30 +339,30 @@ revealOptions:
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.2 偏好数据构造</h2>
+  <h2 class="page-title">3.2 Case 展示与数据流程</h2>
   <div class="data-layout">
     <div class="numbered-flow">
-      <div class="flow-step"><span class="step-no">1</span><div class="flow-step-body">收集历史行为与任务上下文</div></div>
-      <div class="flow-step"><span class="step-no">2</span><div class="flow-step-body">把目标行为改写成模糊任务</div></div>
-      <div class="flow-step"><span class="step-no">3</span><div class="flow-step-body">确定任务需要的 Preference Slots</div></div>
-      <div class="flow-step"><span class="step-no">4</span><div class="flow-step-body">检索并聚合相关历史证据</div></div>
-      <div class="flow-step"><span class="step-no">5</span><div class="flow-step-body">输出可解释的 Preference Label</div></div>
+      <div class="flow-step"><span class="step-no">1</span><div class="flow-step-body">输入资料占位符</div></div>
+      <div class="flow-step"><span class="step-no">2</span><div class="flow-step-body">任务描述占位符</div></div>
+      <div class="flow-step"><span class="step-no">3</span><div class="flow-step-body">字段整理占位符</div></div>
+      <div class="flow-step"><span class="step-no">4</span><div class="flow-step-body">参考信息占位符</div></div>
+      <div class="flow-step"><span class="step-no">5</span><div class="flow-step-body">结果输出占位符</div></div>
     </div>
-    <div class="preference-example">
-      <div class="preference-example-title">一个偏好标签示例</div>
-      <div class="preference-intent"><span>Intent</span><b>完成一个外卖平台任务</b></div>
-      <div class="preference-intent preference-intent--derived"><span>Instruction</span><b>帮我处理一个外卖订单</b></div>
-      <div class="evidence-title">历史证据</div>
-      <div class="evidence-list">
-        <div><span>平台 A</span><b>10 次</b><i style="width: 100%;"></i></div>
-        <div><span>平台 B</span><b>7 次</b><i style="width: 70%;"></i></div>
-        <div><span>平台 C</span><b>2 次</b><i style="width: 20%;"></i></div>
+    <div class="case-showcase">
+      <div class="case-showcase-title">Case 展示</div>
+      <div class="case-showcase-row"><span>目标</span><b>目标描述占位符</b></div>
+      <div class="case-showcase-row case-showcase-row--derived"><span>操作</span><b>操作说明占位符</b></div>
+      <div class="case-evidence-title">参考信息占位符</div>
+      <div class="case-evidence-list">
+        <div><span>候选项 A</span><b>值占位</b><i style="width: 100%;"></i></div>
+        <div><span>候选项 B</span><b>值占位</b><i style="width: 70%;"></i></div>
+        <div><span>候选项 C</span><b>值占位</b><i style="width: 20%;"></i></div>
       </div>
-      <div class="evidence-arrow">↓</div>
-      <div class="slot-result"><span>Preference Slot</span><b>platform = A</b><small>从频次最高的候选值中提取稳定偏好</small></div>
+      <div class="case-evidence-arrow">↓</div>
+      <div class="case-showcase-result"><span>输出字段</span><b>key = value</b><small>结果说明占位符</small></div>
     </div>
   </div>
-  <div class="data-takeaway">把历史证据压缩成可解释的标签，便于 Draft 和 Verification 共同使用。</div>
+  <div class="data-takeaway">把输入信息整理成可复用的结果，便于后续容器使用。</div>
 </div>
 
 <!--v-->
@@ -404,21 +408,21 @@ revealOptions:
 
 <div class="slide-frame slide-frame--page">
   <h2 class="page-title">3.4 任务定义：Draft 与 Verification</h2>
-  <div class="definition-header"><span>训练目标：生成候选结果，并判断其是否满足目标</span><b>方法 / 训练方式</b></div>
+  <div class="definition-header"><span>目标说明占位符</span><b>方法 / 结构说明</b></div>
   <div class="definition-grid">
     <div class="definition-card">
       <h3>Draft 生成</h3>
-      <div class="definition-flow"><div>历史信息 + 模糊任务</div><span>↓</span><div>Preference Draft</div><span>↓</span><div class="result">结构化候选结果</div></div>
-      <div class="definition-line"><b>Input</b><span>历史与当前任务上下文</span></div>
-      <div class="definition-line"><b>Output</b><span>当前任务所需的偏好或决策</span></div>
-      <div class="definition-line"><b>Signal</b><span>候选结果与目标结果的差异</span></div>
+      <div class="definition-flow"><div>输入内容占位符</div><span>↓</span><div>中间步骤占位符</div><span>↓</span><div class="result">输出结果占位符</div></div>
+      <div class="definition-line"><b>Input</b><span>输入说明占位符</span></div>
+      <div class="definition-line"><b>Output</b><span>输出说明占位符</span></div>
+      <div class="definition-line"><b>Signal</b><span>反馈信号占位符</span></div>
     </div>
     <div class="definition-card definition-card--gold">
       <h3>Verification</h3>
-      <div class="definition-flow"><div>历史信息 + 模糊任务 + Draft</div><span>↓</span><div>Verification</div><span>↓</span><div class="result">Correct / Incorrect</div></div>
-      <div class="definition-line"><b>Input</b><span>历史、任务与给定 Draft</span></div>
-      <div class="definition-line"><b>Output</b><span>Draft 是否满足用户偏好</span></div>
-      <div class="definition-line"><b>Signal</b><span>判断结果与监督信号的差异</span></div>
+      <div class="definition-flow"><div>输入内容占位符</div><span>↓</span><div>中间步骤占位符</div><span>↓</span><div class="result">输出结果占位符</div></div>
+      <div class="definition-line"><b>Input</b><span>输入说明占位符</span></div>
+      <div class="definition-line"><b>Output</b><span>输出说明占位符</span></div>
+      <div class="definition-line"><b>Signal</b><span>反馈信号占位符</span></div>
     </div>
   </div>
 </div>

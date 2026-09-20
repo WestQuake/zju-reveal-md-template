@@ -66,7 +66,7 @@ make pdf-raster
 | 框架图 | `.framework-layout`, `.framework-visual`, `.framework-node`, `.framework-key` | 用流程节点和说明项展示系统、方法或信息流 |
 | 图片或图表 | `.figure-frame`, `.figure-caption` | 框架图、数据图表和分析图都使用同一个媒体容器 |
 | 研究动机 | `.motivation-flow`, `.motivation-bottom`, `.research-question` | 上方展示动机流程，下方并列说明背景和核心问题 |
-| 偏好数据 | `.data-layout`, `.numbered-flow`, `.preference-example`, `.slot-result` | 左侧列步骤，右侧展示一个可替换的标签示例 |
+| Case 展示与数据流程 | `.data-layout`, `.numbered-flow`, `.case-showcase`, `.case-showcase-result` | 左侧列步骤，右侧展示一个可替换的案例或结果示例 |
 | Draft / Verification | `.definition-grid`, `.definition-card`, `.definition-flow`, `.definition-line` | 并列展示生成流程和验证流程 |
 | Self-Verify | `.verify-hero-layout`, `.verify-training-row`, `.verify-result-table` | 展示 Mix-Train、GT 监督和自验证信号 |
 | 通用流程 | `.process-layout`, `.process-list`, `.process-step`, `.process-cards` | 表达有明确先后顺序的步骤 |
