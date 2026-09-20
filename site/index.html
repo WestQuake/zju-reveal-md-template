@@ -92,6 +92,7 @@
           <li class="bullet-list__item">经历、荣誉或关键词</li>
           <li class="bullet-list__item">每条内容保持简短清晰</li>
           <li class="bullet-list__item">不需要的条目可以删除</li>
+          <li class="bullet-list__item">第四个方框</li>
         </ul>
       </div>
     </div>
@@ -234,10 +235,10 @@
     <div class="stat-item"><span class="stat-value">01</span><span class="stat-label">Key Point</span></div>
     <div class="stat-item"><span class="stat-value">02</span><span class="stat-label">Next Steps</span></div>
   </div>
-  <div class="info-list">
-    <div class="info-row"><b>标题</b><span>告诉读者这张卡片的主题。</span></div>
-    <div class="info-row info-row--gold"><b>例子</b><span>用一个具体但不敏感的例子支撑观点。</span></div>
-    <div class="info-row info-row--green"><b>结论</b><span>用一句话收束卡片内容。</span></div>
+  <div class="task-coverage">
+    <div><b>输入</b><span>交代背景、约束或已有信息。</span></div>
+    <div><b>重点</b><span>突出读者最需要记住的一条判断。</span></div>
+    <div><b>输出</b><span>用一句结论承接到下一页。</span></div>
   </div>
 </div>
 
@@ -265,6 +266,40 @@
   <div class="layout-note">复合布局把主内容、侧栏提示和底部结论放在同一页，适合内容较多但层级清晰的页面。</div>
 </div>
 
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">2.6 框架图布局结构</h2>
+  <div class="framework-layout">
+    <div class="framework-visual">
+      <div class="framework-node">
+        <span>01 INPUT</span>
+        <strong>背景与历史</strong>
+        <small>汇总用户、任务或环境信息</small>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-node framework-node--gold">
+        <span>02 AGENT</span>
+        <strong>理解与执行</strong>
+        <small>生成一个可解释的中间结果</small>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-node framework-node--green">
+        <span>03 EVALUATE</span>
+        <strong>反馈与判断</strong>
+        <small>检查结果并决定下一步行动</small>
+      </div>
+    </div>
+    <div class="framework-key">
+      <div class="framework-key-item"><b>输入</b><span>把任务所需的上下文放在流程起点。</span></div>
+      <div class="framework-key-item"><b>主体</b><span>说明模型、方法或系统如何处理信息。</span></div>
+      <div class="framework-key-item"><b>环境</b><span>补充交互对象、工具或运行场景。</span></div>
+      <div class="framework-key-item"><b>输出</b><span>用一句话说明评价结果或下一步。</span></div>
+    </div>
+  </div>
+  <div class="layout-note">框架图适合先展示信息流，再用下方四个说明项解释每个模块的职责。</div>
+</div>
+
 <!--s-->
 
 <div class="slide-frame slide-frame--section">
@@ -278,31 +313,164 @@
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.1 流程步骤容器</h2>
-  <div class="process-layout">
-    <div class="process-list">
-      <div class="process-step"><span class="process-index">1</span><div class="process-body">准备背景与输入信息</div></div>
-      <div class="process-step"><span class="process-index">2</span><div class="process-body">组合内容并突出重点</div></div>
-      <div class="process-step"><span class="process-index">3</span><div class="process-body">检查结构并输出结论</div></div>
+  <h2 class="page-title">3.1 研究动机</h2>
+  <div class="motivation-flow">
+    <div class="motivation-node"><div class="motivation-node-title">用户历史</div><div>从行为记录中观察稳定偏好</div></div>
+    <div class="motivation-arrow">→</div>
+    <div class="motivation-node"><div class="motivation-node-title">模糊任务</div><div>“帮我完成一个相关任务”</div></div>
+    <div class="motivation-arrow">→</div>
+    <div class="motivation-node"><div class="motivation-node-title">Draft</div><div>生成一个符合上下文的候选结果</div></div>
+    <div class="motivation-arrow">→</div>
+    <div class="motivation-node motivation-node--gold"><div class="motivation-node-title">Verification</div><div>判断候选结果是否满足目标</div></div>
+  </div>
+  <div class="motivation-bottom">
+    <div class="motivation-note">
+      <div class="case-title">研究背景</div>
+      <div class="motivation-brief-lead">如何让模型从历史行为中提取可复用的偏好？</div>
+      <div class="motivation-brief-row"><b>输入</b><span>用户历史 + 模糊任务</span></div>
+      <div class="motivation-brief-row"><b>难点</b><span>区分偶然行为与稳定偏好</span></div>
+      <div class="motivation-brief-foot"><b>验证能力可以反过来帮助生成能力。</b> 先判断，再改进候选结果。</div>
     </div>
-    <div class="process-cards">
-      <div class="process-card">
-        <div class="process-card-title">流程说明</div>
-        <p>步骤容器适合表达严格的先后顺序，每步只保留一个动作。</p>
-      </div>
-      <div class="process-card process-card--gold">
-        <div class="process-card-title">使用规则</div>
-        <p>如果节点没有顺序关系，就改用卡片、矩阵或对比表。</p>
-      </div>
+    <div class="research-question">
+      <div class="question-lead">核心问题</div>
+      <div class="motivation-question-main">能否让 Verify 判断 Draft 是否合理，并把判断结果转成生成信号？</div>
+      <div class="motivation-question-note">模板提示：把右侧问题替换成你的研究假设、设计目标或页面结论。</div>
     </div>
   </div>
-  <div class="process-note">如果节点没有顺序关系，就改用卡片、矩阵或对比表。</div>
 </div>
 
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.2 对比表容器</h2>
+  <h2 class="page-title">3.2 偏好数据构造</h2>
+  <div class="data-layout">
+    <div class="numbered-flow">
+      <div class="flow-step"><span class="step-no">1</span><div class="flow-step-body">收集历史行为与任务上下文</div></div>
+      <div class="flow-step"><span class="step-no">2</span><div class="flow-step-body">把目标行为改写成模糊任务</div></div>
+      <div class="flow-step"><span class="step-no">3</span><div class="flow-step-body">确定任务需要的 Preference Slots</div></div>
+      <div class="flow-step"><span class="step-no">4</span><div class="flow-step-body">检索并聚合相关历史证据</div></div>
+      <div class="flow-step"><span class="step-no">5</span><div class="flow-step-body">输出可解释的 Preference Label</div></div>
+    </div>
+    <div class="preference-example">
+      <div class="preference-example-title">一个偏好标签示例</div>
+      <div class="preference-intent"><span>Intent</span><b>完成一个外卖平台任务</b></div>
+      <div class="preference-intent preference-intent--derived"><span>Instruction</span><b>帮我处理一个外卖订单</b></div>
+      <div class="evidence-title">历史证据</div>
+      <div class="evidence-list">
+        <div><span>平台 A</span><b>10 次</b><i style="width: 100%;"></i></div>
+        <div><span>平台 B</span><b>7 次</b><i style="width: 70%;"></i></div>
+        <div><span>平台 C</span><b>2 次</b><i style="width: 20%;"></i></div>
+      </div>
+      <div class="evidence-arrow">↓</div>
+      <div class="slot-result"><span>Preference Slot</span><b>platform = A</b><small>从频次最高的候选值中提取稳定偏好</small></div>
+    </div>
+  </div>
+  <div class="data-takeaway">把历史证据压缩成可解释的标签，便于 Draft 和 Verification 共同使用。</div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">3.3 验证与结论容器</h2>
+  <div class="verify-idea"><b>核心想法</b><span>先提出一个可验证的判断，再用简短证据支持或修正它。</span></div>
+  <div class="verify-layout verify-layout--compact">
+    <div class="verify-flow">
+      <div class="verify-row">
+        <div class="verify-label">Input</div>
+        <div class="verify-copy">
+          <div class="verify-copy-title">背景信息与当前问题</div>
+          <div class="verify-copy-sub">明确验证对象</div>
+        </div>
+        <div class="verify-target"><b>Evidence</b><br />列出一条关键证据</div>
+      </div>
+      <div class="verify-row verify-row--gold">
+        <div class="verify-label">Output</div>
+        <div class="verify-copy">
+          <div class="verify-copy-title">支持、反对或待确认</div>
+          <div class="verify-copy-sub">写出结论</div>
+        </div>
+        <div class="verify-target"><b>Next</b><br />给出下一步行动</div>
+      </div>
+    </div>
+    <div class="verify-result">
+      <div class="verify-result__label">结论示例</div>
+      <table class="verify-table">
+        <thead><tr><th>项目</th><th>示例</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>判断</td><td>目标清晰</td><td class="table-status table-status--done">通过</td></tr>
+          <tr><td>证据</td><td>信息完整</td><td class="table-status table-status--done">通过</td></tr>
+          <tr><td>下一步</td><td>补充细节</td><td class="table-status table-status--next">待办</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="verify-conclusion">结论占位符：用一句话总结最重要的发现，避免重复整页内容。</div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">3.4 任务定义：Draft 与 Verification</h2>
+  <div class="definition-header"><span>训练目标：生成候选结果，并判断其是否满足目标</span><b>方法 / 训练方式</b></div>
+  <div class="definition-grid">
+    <div class="definition-card">
+      <h3>Draft 生成</h3>
+      <div class="definition-flow"><div>历史信息 + 模糊任务</div><span>↓</span><div>Preference Draft</div><span>↓</span><div class="result">结构化候选结果</div></div>
+      <div class="definition-line"><b>Input</b><span>历史与当前任务上下文</span></div>
+      <div class="definition-line"><b>Output</b><span>当前任务所需的偏好或决策</span></div>
+      <div class="definition-line"><b>Signal</b><span>候选结果与目标结果的差异</span></div>
+    </div>
+    <div class="definition-card definition-card--gold">
+      <h3>Verification</h3>
+      <div class="definition-flow"><div>历史信息 + 模糊任务 + Draft</div><span>↓</span><div>Verification</div><span>↓</span><div class="result">Correct / Incorrect</div></div>
+      <div class="definition-line"><b>Input</b><span>历史、任务与给定 Draft</span></div>
+      <div class="definition-line"><b>Output</b><span>Draft 是否满足用户偏好</span></div>
+      <div class="definition-line"><b>Signal</b><span>判断结果与监督信号的差异</span></div>
+    </div>
+  </div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">3.5 Self-Verify：以验证驱动生成</h2>
+  <div class="verify-idea"><b>核心想法</b><span>让模型先生成 Draft，再用自身的 Verify 判断结果是否可靠，并把判断转成训练信号。</span></div>
+  <div class="verify-hero-layout">
+    <div class="verify-process">
+      <div class="verify-section-label"><b>采用 Mix-Train</b><span>联合学习 Draft 与 Verify</span></div>
+      <div class="verify-train-note">Verify 由 GT 监督；用 Self-Verify 代替原本方法中 Draft 的 GT Reward。</div>
+      <div class="verify-training-flow">
+        <div class="verify-training-row">
+          <div class="verify-training-head">Draft</div>
+          <div class="verify-training-copy">历史信息 + 模糊任务<br /><b>生成候选结果</b></div>
+          <div class="verify-training-target"><b>Self-Verify</b> = Correct / Incorrect<br />Draft Reward = 1 / 0</div>
+        </div>
+        <div class="verify-training-row verify-training-row--gold">
+          <div class="verify-training-head">Verify</div>
+          <div class="verify-training-copy">读取 Draft 与上下文<br /><b>判断是否符合目标</b></div>
+          <div class="verify-training-target"><b>GT</b> 监督 Verify</div>
+        </div>
+      </div>
+    </div>
+    <div class="verify-results">
+      <div class="verify-section-label"><b>结果对比</b><span>Reward / Accuracy</span></div>
+      <table class="verify-result-table">
+        <thead><tr><th>奖励信号</th><th>GT</th><th>Self-Verify</th></tr></thead>
+        <tbody>
+          <tr><td>Draft Reward</td><td>参考值</td><td>接近参考值</td></tr>
+          <tr><td>判断结果</td><td>监督信号</td><td>自评信号</td></tr>
+          <tr><td>适用方式</td><td>训练 Verify</td><td>辅助训练 Draft</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="verify-conclusion">Self-Verify 让验证结果参与生成训练，同时保留 GT 对 Verify 的监督。</div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">3.6 对比表容器</h2>
   <div class="table-layout">
     <div class="table-card">
       <div class="table-card-title">信息对比示例</div>
@@ -323,39 +491,6 @@
     </div>
   </div>
   <div class="table-conclusion">对比表只保留会影响决策的维度，并用颜色强调推荐选项。</div>
-</div>
-
-<!--v-->
-
-<div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.3 验证与结论容器</h2>
-  <div class="verify-idea"><b>核心想法</b><span>先提出一个可验证的判断，再用简短证据支持或修正它。</span></div>
-  <div class="verify-layout verify-layout--compact">
-    <div class="verify-flow">
-      <div class="verify-row">
-        <div class="verify-label">Input</div>
-        <div class="verify-copy">背景信息与当前问题<br /><b>明确验证对象</b></div>
-        <div class="verify-target"><b>Evidence</b><br />列出一条关键证据</div>
-      </div>
-      <div class="verify-row verify-row--gold">
-        <div class="verify-label">Output</div>
-        <div class="verify-copy">支持、反对或待确认<br /><b>写出结论</b></div>
-        <div class="verify-target"><b>Next</b><br />给出下一步行动</div>
-      </div>
-    </div>
-    <div class="verify-result">
-      <div class="verify-result__label">结论示例</div>
-      <table class="verify-table">
-        <thead><tr><th>项目</th><th>示例</th><th>状态</th></tr></thead>
-        <tbody>
-          <tr><td>判断</td><td>目标清晰</td><td class="table-status table-status--done">通过</td></tr>
-          <tr><td>证据</td><td>信息完整</td><td class="table-status table-status--done">通过</td></tr>
-          <tr><td>下一步</td><td>补充细节</td><td class="table-status table-status--next">待办</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="verify-conclusion">结论占位符：用一句话总结最重要的发现，避免重复整页内容。</div>
 </div>
 
 <!--s-->

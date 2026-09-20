@@ -62,9 +62,14 @@ make pdf-raster
 | 左右布局 | `.layout-split`, `.layout-panel` | 并列展示背景与结果、问题与回答等内容，并自动等高 |
 | 三栏布局 | `.task-grid`, `.task-card` | 展示三个并列阶段或信息模块；少一个时剩余卡片自动扩展 |
 | 复合布局 | `.composite-layout`, `.composite-main`, `.composite-side` | 组合主内容、侧栏提示和补充信息，并保持外框对齐 |
-| 任务卡片 | `.task-grid`, `.task-card`, `.stat-strip`, `.info-list` | 展示任务、指标和补充说明 |
+| 任务卡片 | `.task-grid`, `.task-card`, `.stat-strip`, `.task-coverage` | 展示任务、指标和底部三项补充说明 |
+| 框架图 | `.framework-layout`, `.framework-visual`, `.framework-node`, `.framework-key` | 用流程节点和说明项展示系统、方法或信息流 |
 | 图片或图表 | `.figure-frame`, `.figure-caption` | 框架图、数据图表和分析图都使用同一个媒体容器 |
-| 流程 | `.process-layout`, `.process-list`, `.process-step`, `.process-cards` | 表达有明确先后顺序的步骤 |
+| 研究动机 | `.motivation-flow`, `.motivation-bottom`, `.research-question` | 上方展示动机流程，下方并列说明背景和核心问题 |
+| 偏好数据 | `.data-layout`, `.numbered-flow`, `.preference-example`, `.slot-result` | 左侧列步骤，右侧展示一个可替换的标签示例 |
+| Draft / Verification | `.definition-grid`, `.definition-card`, `.definition-flow`, `.definition-line` | 并列展示生成流程和验证流程 |
+| Self-Verify | `.verify-hero-layout`, `.verify-training-row`, `.verify-result-table` | 展示 Mix-Train、GT 监督和自验证信号 |
+| 通用流程 | `.process-layout`, `.process-list`, `.process-step`, `.process-cards` | 表达有明确先后顺序的步骤 |
 | 表格 | `.table-layout`, `.table-card`, `.comparison-table` | 展示结构化信息或方案对比 |
 | 验证与结论 | `.verify-layout`, `.verify-row`, `.verify-table`, `.verify-conclusion` | 组织输入、证据、输出和下一步 |
 
@@ -89,6 +94,8 @@ make pdf-raster
 并列容器使用 `auto-fit` 网格，不要给每个卡片写固定宽度。复制 `.stack-points`、`.task-grid` 或 `.feature-grid` 后，直接增删子项即可，CSS 会重新分配列宽并让同一行子项保持等高。
 
 验证页默认使用紧凑版 `.verify-layout`，没有额外说明时，两行验证内容会自然靠近。如果在两行之间加入解释文字，或希望保留更明显的上下呼吸空间，可以改用 `.verify-layout--spacious`。
+
+`.verify-row` 中的主要说明建议拆成 `.verify-copy-title` 和 `.verify-copy-sub` 两行：第一行写对象或问题，第二行写动作或结论。这样可以复用 `3.3 验证与结论容器` 和 `3.5 Self-Verify` 中的“主标题 + 副说明”层级。
 
 项目中的 SVG 示例图是抽象占位素材，可以直接替换为自己的图表或插图。浙江大学 logo 属于模板品牌元素，建议保留并使用 `alt` 文本。
 
