@@ -7,7 +7,7 @@ import puppeteer from './.vendor/reveal-md/node_modules/puppeteer-core/lib/esm/p
 
 const root = process.cwd();
 const siteDir = join(root, 'site');
-const outputPdf = resolve(root, '..', 'interview presentation.pdf');
+const outputPdf = resolve(root, '..', 'zju-reveal-md-template.pdf');
 const width = 1200;
 const height = 700;
 const assetSettleMs = Number(process.env.PDF_ASSET_SETTLE_MS || 1500);

@@ -294,7 +294,7 @@ revealOptions:
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.1 研究动机</h2>
+  <h2 class="page-title">3.1 流程示例占位符</h2>
   <div class="motivation-flow">
     <div class="motivation-node"><div class="motivation-node-title">起点占位</div><div>输入信息占位符</div></div>
     <div class="motivation-arrow">→</div>
@@ -323,7 +323,7 @@ revealOptions:
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.2 Case 展示与数据流程</h2>
+  <h2 class="page-title">3.2 案例展示占位符</h2>
   <div class="data-layout">
     <div class="numbered-flow">
       <div class="flow-step"><span class="step-no">1</span><div class="flow-step-body">输入资料占位符</div></div>
@@ -352,61 +352,61 @@ revealOptions:
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.3 验证与结论容器</h2>
-  <div class="verify-idea"><b>核心想法</b><span>验证页主说明或方法摘要占位符。</span></div>
-  <div class="verify-layout verify-layout--compact">
-    <div class="verify-flow">
-      <div class="verify-row">
-        <div class="verify-label">Input</div>
-        <div class="verify-copy">
-          <div class="verify-copy-title">输入标题占位符</div>
-          <div class="verify-copy-sub">输入说明占位符</div>
+  <h2 class="page-title">3.3 信息流程容器</h2>
+  <div class="summary-banner"><b>核心想法</b><span>页面主说明或方法摘要占位符。</span></div>
+  <div class="flow-layout flow-layout--compact">
+    <div class="flow-list">
+      <div class="flow-row">
+        <div class="flow-label">Input</div>
+        <div class="flow-copy">
+          <div class="flow-copy-title">输入标题占位符</div>
+          <div class="flow-copy-sub">输入说明占位符</div>
         </div>
-        <div class="verify-target"><b>Evidence</b><br />证据说明占位符</div>
+        <div class="flow-target"><b>Evidence</b><br />证据说明占位符</div>
       </div>
-      <div class="verify-row verify-row--gold">
-        <div class="verify-label">Output</div>
-        <div class="verify-copy">
-          <div class="verify-copy-title">输出标题占位符</div>
-          <div class="verify-copy-sub">输出说明占位符</div>
+      <div class="flow-row flow-row--gold">
+        <div class="flow-label">Output</div>
+        <div class="flow-copy">
+          <div class="flow-copy-title">输出标题占位符</div>
+          <div class="flow-copy-sub">输出说明占位符</div>
         </div>
-        <div class="verify-target"><b>Next</b><br />下一步说明占位符</div>
+        <div class="flow-target"><b>Next</b><br />下一步说明占位符</div>
       </div>
     </div>
-    <div class="verify-result">
-      <div class="verify-result__label">结果示例</div>
-      <table class="verify-table">
+    <div class="result-panel">
+      <div class="result-panel__label">结果示例</div>
+      <table class="result-table">
         <thead><tr><th>项目</th><th>示例</th><th>状态</th></tr></thead>
         <tbody>
-          <tr><td>条目 A</td><td>内容占位符</td><td><span class="table-status table-status--done">完成</span></td></tr>
-          <tr><td>条目 B</td><td>补充占位符</td><td><span class="table-status table-status--done">完成</span></td></tr>
-          <tr><td>条目 C</td><td>结果占位符</td><td><span class="table-status table-status--plain">状态占位符</span></td></tr>
+          <tr><td>条目 A</td><td>内容占位符</td><td class="table-status-cell table-status-cell--green"><span>完成</span></td></tr>
+          <tr><td>条目 B</td><td>补充占位符</td><td class="table-status-cell table-status-cell--gold"><span>待确认</span></td></tr>
+          <tr><td>条目 C</td><td>结果占位符</td><td>状态占位符</td></tr>
         </tbody>
       </table>
     </div>
   </div>
-  <div class="verify-conclusion">结论占位符：用一句话总结最重要的发现，避免重复整页内容。</div>
+  <div class="conclusion-note">结论占位符：用一句话总结最重要的发现，避免重复整页内容。</div>
 </div>
 
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.4 任务定义：Draft 与 Verification</h2>
-  <div class="definition-header"><span>目标说明占位符</span><b>方法 / 结构说明</b></div>
-  <div class="definition-grid">
-    <div class="definition-card">
-      <h3>Draft 生成</h3>
-      <div class="definition-flow"><div>输入内容占位符</div><span>↓</span><div>中间步骤占位符</div><span>↓</span><div class="result">输出结果占位符</div></div>
-      <div class="definition-line"><b>Input</b><span>输入说明占位符</span></div>
-      <div class="definition-line"><b>Output</b><span>输出说明占位符</span></div>
-      <div class="definition-line"><b>Signal</b><span>反馈信号占位符</span></div>
+  <h2 class="page-title">3.4 结构布局占位符</h2>
+  <div class="structure-header"><span>目标说明占位符</span><b>模块 / 结构说明</b></div>
+  <div class="structure-grid">
+    <div class="structure-card">
+      <h3>模块 A</h3>
+      <div class="structure-flow"><div>输入内容占位符</div><span>↓</span><div>中间步骤占位符</div><span>↓</span><div class="result">输出结果占位符</div></div>
+      <div class="structure-line"><b>Input</b><span>输入说明占位符</span></div>
+      <div class="structure-line"><b>Output</b><span>输出说明占位符</span></div>
+      <div class="structure-line"><b>Signal</b><span>反馈信号占位符</span></div>
     </div>
-    <div class="definition-card definition-card--gold">
-      <h3>Verification</h3>
-      <div class="definition-flow"><div>输入内容占位符</div><span>↓</span><div>中间步骤占位符</div><span>↓</span><div class="result">输出结果占位符</div></div>
-      <div class="definition-line"><b>Input</b><span>输入说明占位符</span></div>
-      <div class="definition-line"><b>Output</b><span>输出说明占位符</span></div>
-      <div class="definition-line"><b>Signal</b><span>反馈信号占位符</span></div>
+    <div class="structure-card structure-card--gold">
+      <h3>模块 B</h3>
+      <div class="structure-flow"><div>输入内容占位符</div><span>↓</span><div>中间步骤占位符</div><span>↓</span><div class="result">输出结果占位符</div></div>
+      <div class="structure-line"><b>Input</b><span>输入说明占位符</span></div>
+      <div class="structure-line"><b>Output</b><span>输出说明占位符</span></div>
+      <div class="structure-line"><b>Signal</b><span>反馈信号占位符</span></div>
     </div>
   </div>
 </div>
@@ -414,28 +414,28 @@ revealOptions:
 <!--v-->
 
 <div class="slide-frame slide-frame--page">
-  <h2 class="page-title">3.5 Self-Verify：以验证驱动生成</h2>
-  <div class="verify-idea"><b>核心想法</b><span>页面核心想法或方法摘要占位符。</span></div>
-  <div class="verify-hero-layout">
-    <div class="verify-process">
-      <div class="verify-section-label"><b>方法组合</b><span>主标题后的补充说明占位符</span></div>
-      <div class="verify-train-note">方法说明或设计动机占位符。</div>
-      <div class="verify-training-flow">
-        <div class="verify-training-row">
-          <div class="verify-training-head">生成</div>
-          <div class="verify-training-copy">输入内容占位符<br /><b>生成结果占位符</b></div>
-          <div class="verify-training-target"><b>判断结果</b> = 状态占位符<br />反馈信号占位符</div>
+  <h2 class="page-title">3.5 方法展示占位符</h2>
+  <div class="summary-banner"><b>核心想法</b><span>页面主说明或方法摘要占位符。</span></div>
+  <div class="method-layout">
+    <div class="method-panel">
+      <div class="panel-heading"><b>模块组合</b><span>主标题后的补充说明占位符</span></div>
+      <div class="panel-note">方法说明或设计动机占位符。</div>
+      <div class="method-flow">
+        <div class="method-row">
+          <div class="method-row-label">步骤 A</div>
+          <div class="method-row-copy">输入内容占位符<br /><b>生成结果占位符</b></div>
+          <div class="method-row-target"><b>判断结果</b> = 状态占位符<br />反馈信号占位符</div>
         </div>
-        <div class="verify-training-row verify-training-row--gold">
-          <div class="verify-training-head">检查</div>
-          <div class="verify-training-copy">读取结果与上下文<br /><b>判断说明占位符</b></div>
-          <div class="verify-training-target"><b>反馈</b> 说明占位符</div>
+        <div class="method-row method-row--gold">
+          <div class="method-row-label">步骤 B</div>
+          <div class="method-row-copy">读取结果与上下文<br /><b>判断说明占位符</b></div>
+          <div class="method-row-target"><b>反馈</b> 说明占位符</div>
         </div>
       </div>
     </div>
-    <div class="verify-results">
-      <div class="verify-section-label"><b>结果对比</b><span>指标 / 维度</span></div>
-      <table class="verify-result-table">
+    <div class="comparison-panel">
+      <div class="panel-heading"><b>结果示例</b><span>指标 / 维度</span></div>
+      <table class="result-table">
         <thead><tr><th>指标</th><th>方案 A</th><th>方案 B</th></tr></thead>
         <tbody>
           <tr><td>指标一</td><td>数值占位</td><td>数值占位</td></tr>
@@ -445,7 +445,7 @@ revealOptions:
       </table>
     </div>
   </div>
-  <div class="verify-conclusion">页面结论或读者需要记住的要点占位符。</div>
+  <div class="conclusion-note">页面结论或读者需要记住的要点占位符。</div>
 </div>
 
 <!--v-->
@@ -472,6 +472,25 @@ revealOptions:
     </div>
   </div>
   <div class="table-conclusion">对比表只保留会影响决策的维度，并用颜色强调推荐选项。</div>
+</div>
+
+<!--v-->
+
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">3.7 全宽表格容器</h2>
+  <div class="table-layout table-layout--full">
+    <table class="comparison-table">
+      <caption>全宽信息对比示例</caption>
+      <thead><tr><th>项目</th><th>维度</th><th>方案 A</th><th>方案 B</th></tr></thead>
+      <tbody>
+        <tr><td>条目 A</td><td>维度占位符</td><td>内容占位符</td><td>结果占位符</td></tr>
+        <tr><td>条目 B</td><td>维度占位符</td><td>补充占位符</td><td>状态占位符</td></tr>
+        <tr><td>条目 C</td><td>维度占位符</td><td>说明占位符</td><td>结论占位符</td></tr>
+        <tr><td>条目 D</td><td>维度占位符</td><td>备注占位符</td><td>待确认</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-conclusion">全宽表格适合展示多列字段；列数增加时优先缩短文案，而不是压缩字号。</div>
 </div>
 
 <!--s-->

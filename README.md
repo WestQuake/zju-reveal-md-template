@@ -42,7 +42,7 @@ make pdf
 make pdf-raster
 ```
 
-导出的 PDF 默认保存在项目根目录，相关临时文件和导出结果不会提交到 Git。
+导出的 PDF 默认保存为项目上级目录中的 `zju-reveal-md-template.pdf`，相关临时文件和导出结果不会提交到 Git。
 
 首次执行任意构建目标时，`Makefile` 会自动安装 `.vendor/reveal-md` 的 npm 依赖。生成的 `.vendor/reveal-md/node_modules/` 已被忽略，不需要手动提交。
 
@@ -67,42 +67,231 @@ make pdf-raster
 | 图片或图表 | `.figure-frame`, `.figure-caption` | 框架图、数据图表和分析图都使用同一个媒体容器 |
 | 研究动机 | `.motivation-flow`, `.motivation-bottom`, `.research-question` | 上方展示动机流程，下方并列说明背景和核心问题 |
 | Case 展示与数据流程 | `.data-layout`, `.numbered-flow`, `.case-showcase`, `.case-showcase-result` | 左侧列步骤，右侧展示一个可替换的案例或结果示例 |
-| Draft / Verification | `.definition-grid`, `.definition-card`, `.definition-flow`, `.definition-line` | 并列展示生成流程和验证流程 |
-| 验证驱动生成 | `.verify-hero-layout`, `.verify-training-row`, `.verify-result-table` | 展示方法组合、流程信号和结果对比 |
+| 结构布局 | `.structure-grid`, `.structure-card`, `.structure-flow`, `.structure-line` | 并列展示两个结构模块和各自的输入、输出说明 |
+| 方法与结果 | `.method-layout`, `.method-row`, `.comparison-panel`, `.result-table` | 左侧展示步骤，右侧展示指标或结果 |
 | 通用流程 | `.process-layout`, `.process-list`, `.process-step`, `.process-cards` | 表达有明确先后顺序的步骤 |
 | 表格 | `.table-layout`, `.table-card`, `.comparison-table` | 展示结构化信息或方案对比 |
-| 验证与结论 | `.verify-layout`, `.verify-row`, `.verify-table`, `.verify-conclusion` | 组织输入、证据、输出和下一步 |
+| 信息流程 | `.flow-layout`, `.flow-row`, `.result-table`, `.conclusion-note` | 组织输入、说明、结果和结论 |
 
-颜色修饰类使用统一的 `--gold`、`--green` 和 `--accent` 后缀，例如 `.feature-card--gold` 或 `.verify-row--gold`。不需要某个颜色时，直接使用基础容器即可。
+颜色修饰类使用统一的 `--gold`、`--green` 和 `--accent` 后缀，例如 `.feature-card--gold` 或 `.flow-row--gold`。不需要某个颜色时，直接使用基础容器即可。结果示例表格的状态单元格可以使用 `.table-status-cell table-status-cell--green` 或 `.table-status-cell table-status-cell--gold` 填满最后一列；不需要颜色时，直接使用普通 `<td>`。
 
 ## 如何使用容器
 
-1. 从 `main.md` 复制最接近目标页面的 HTML 结构。
-2. 保留容器 class，只替换标题、正文、标签和图片路径。
-3. 将图片放入 `assets/`，并在 Markdown 中使用相对路径，例如：
+基本流程是：从 `main.md` 复制最接近目标页面的结构，保留 class，只替换标题、正文、标签和图片路径。容器不依赖 JavaScript，直接放在 reveal-md 的 Markdown 页面中即可。
 
-   ```html
-   <div class="figure-frame">
-     <img src="assets/overview.svg" alt="示例图" />
-     <div class="figure-caption">一句简短的图片说明。</div>
-   </div>
-   ```
+### 1. 页面骨架
 
-4. 图片应当服务于一个明确观点，并配合 `.figure-caption` 写出简短说明。框架图、数据图表和分析图不需要分别建立新的 CSS 容器。
-5. 如果一个页面同时包含太多模块，优先拆成多个页面，而不是继续缩小字体。
+所有页面都建议放在一个 `.slide-frame` 中，再根据用途增加修饰类：
 
-并列容器使用 `auto-fit` 网格，不要给每个卡片写固定宽度。复制 `.stack-points`、`.task-grid` 或 `.feature-grid` 后，直接增删子项即可，CSS 会重新分配列宽并让同一行子项保持等高。
+```html
+<div class="slide-frame slide-frame--page">
+  <h2 class="page-title">页面标题</h2>
+  <!-- 页面内容 -->
+</div>
+```
 
-验证页默认使用紧凑版 `.verify-layout`，没有额外说明时，两行验证内容会自然靠近。如果在两行之间加入解释文字，或希望保留更明显的上下呼吸空间，可以改用 `.verify-layout--spacious`。
+- `.slide-frame--cover`：封面；搭配 `.brand-mark`、`.cover-content`、`.cover-title`、`.cover-meta`。
+- `.slide-frame--page`：普通内容页；搭配 `.page-title`。
+- `.slide-frame--section`：章节分割页；内部使用 `.section-eyebrow`、`.section-body`、`.section-title`、`.section-note`。
+- `.slide-frame--closing`：结束页；内部使用 `.closing-content`、`.closing-title`、`.closing-note`。
+- `.agenda-frame`、`.agenda-list`、`.agenda-index`、`.agenda-item`、`.agenda-note`：目录页结构。目录项可以直接增删，网格会重新排列。
 
-`.verify-row` 中的主要说明建议拆成 `.verify-copy-title` 和 `.verify-copy-sub` 两行：第一行写对象或问题，第二行写动作或结论。这样可以复用 `3.3 验证与结论容器` 和 `3.5 Self-Verify` 中的“主标题 + 副说明”层级。
+### 2. 信息与卡片
 
-项目中的 SVG 示例图是抽象占位素材，可以直接替换为自己的图表或插图。浙江大学 logo 属于模板品牌元素，建议保留并使用 `alt` 文本。
+#### 个人或项目信息
+
+`.profile-layout` 是左侧信息卡、右侧内容区的双栏布局；`.profile-card`、`.profile-image` 放置头像或 logo，`.profile-content` 放置右侧内容。指标和说明可以这样组合：
+
+```html
+<div class="profile-layout">
+  <div class="profile-card">
+    <img class="profile-image" src="assets/portrait-placeholder.svg" alt="图片占位符" />
+    <div class="profile-name">名称占位符</div>
+    <div class="profile-role">身份或方向占位符</div>
+  </div>
+  <div class="profile-content">
+    <div class="metric-grid">
+      <div class="metric-card"><div class="metric-value">01</div><div class="metric-label">指标标签</div></div>
+      <div class="metric-card metric-card--gold"><div class="metric-value">02</div><div class="metric-label">指标标签</div></div>
+    </div>
+    <div class="content-block">
+      <div class="content-block__title">内容标题</div>
+      <ul class="bullet-list"><li class="bullet-list__item">说明占位符</li></ul>
+    </div>
+  </div>
+</div>
+```
+
+`.metric-grid` 使用自动列宽，删除或增加 `.metric-card` 后不需要手动改宽度。`.content-block` 可以配合 `.tag-list` 或 `.bullet-list` 使用。
+
+#### 并列卡片
+
+- `.feature-grid` + `.feature-card`：适合两个或多个内容模块；`.feature-card--gold` 可强调第二个模块。
+- `.focus-grid` + `.focus-card`：适合展示关键词、短结论或三项重点；可使用 `.focus-card--gold`、`.focus-card--green`。
+- `.info-banner`、`.info-banner__title`、`.info-banner__meta`：放在卡片组上方，展示统一标题、时间或标签。
+
+```html
+<div class="feature-grid">
+  <div class="feature-card">
+    <div class="feature-title">模块标题</div>
+    <div class="feature-question">一句话说明模块用途。</div>
+    <div class="feature-line"><b>重点：</b>关键词或结论。</div>
+    <div class="feature-tags"><span class="feature-tag">标签 A</span></div>
+  </div>
+  <div class="feature-card feature-card--gold">
+    <div class="feature-title">模块标题</div>
+    <div class="feature-question">另一条说明。</div>
+  </div>
+</div>
+```
+
+### 3. 页面布局
+
+#### 左右、上下和复合布局
+
+- `.split-layout`：通用左右布局，适合“文字 + 图片”。子项通常使用 `.compare-stack`、`.compare-card`、`.compare-title`、`.compare-row`。
+- `.layout-split` + `.layout-panel`：两个等高面板；可以用 `.layout-panel--gold` 做轻强调。
+- `.stack-layout`：上下布局；上方放 `.stack-visual`，下方放 `.stack-points` 和多个 `.stack-point`。
+- `.composite-layout`：主内容和侧栏组合；主区域使用 `.composite-main`，侧栏使用 `.composite-side`。
+
+```html
+<div class="stack-layout">
+  <div class="stack-visual">
+    <div class="stack-visual__label">主视觉标题</div>
+    <div class="stack-visual__path">图片或流程图占位符</div>
+  </div>
+  <div class="stack-points">
+    <div class="stack-point"><b>重点一</b><span>补充说明。</span></div>
+    <div class="stack-point"><b>重点二</b><span>补充说明。</span></div>
+    <div class="stack-point"><b>重点三</b><span>补充说明。</span></div>
+  </div>
+</div>
+```
+
+`.stack-points`、`.feature-grid`、`.focus-grid`、`.task-grid` 都使用自动网格和等高行。直接增删子项即可，避免给每个子项写固定宽度。
+
+#### 三栏任务与统计
+
+`.task-grid` + `.task-card` 适合展示三个阶段、任务或信息模块；卡片内部可用 `.task-header`、`.task-index`、`.task-name`、`.task-example`、`.task-detail`、`.task-goal`。底部统计使用 `.stat-strip`、`.stat-item`、`.stat-value`、`.stat-label`，三项补充说明使用 `.task-coverage`。
+
+```html
+<div class="task-grid">
+  <div class="task-card"><div class="task-header"><span class="task-index">01</span><b class="task-name">阶段名称</b></div><div class="task-example">示例占位符</div><div class="task-detail">说明占位符</div></div>
+  <div class="task-card task-card--gold"><div class="task-header"><span class="task-index">02</span><b class="task-name">阶段名称</b></div><div class="task-example">示例占位符</div><div class="task-detail">说明占位符</div></div>
+</div>
+```
+
+#### 框架图与图片
+
+`.framework-showcase` 适合“一张框架图 + 下方说明项”：图片放进 `.framework-image-frame`，说明项放进 `.framework-key`，每项使用 `.framework-key-item`。`.framework-key` 默认两列两行，删减说明项后会自动重新排列。
+
+所有独立图片、数据图和分析图都使用同一套媒体容器：
+
+```html
+<div class="figure-frame">
+  <img src="assets/overview.svg" alt="抽象示例图" />
+  <div class="figure-caption">一句简短的图片说明。</div>
+</div>
+```
+
+图片必须放在项目的 `assets/` 目录中，并使用相对路径 `assets/文件名`。`alt` 应写成图片用途，而不是个人或论文信息。
+
+### 4. 流程与方法
+
+#### 通用流程
+
+`.process-layout` 用于左右分栏的流程页；左侧使用 `.process-list`、`.process-step`、`.process-index`、`.process-body`，右侧可以使用 `.process-cards` 和 `.process-card`。最后一个步骤会自动使用不同的强调色，说明文字可放在 `.process-note`。
+
+#### 信息流程
+
+`.flow-layout` + `.flow-list` + `.flow-row` 用于输入、说明、结果和结论。行内推荐拆成 `.flow-label`、`.flow-copy`、`.flow-copy-title`、`.flow-copy-sub`、`.flow-target`。结果区域使用 `.result-panel`、`.result-panel__label` 和 `.result-table`，页尾结论使用 `.conclusion-note`。
+
+```html
+<div class="flow-layout flow-layout--compact">
+  <div class="flow-list">
+    <div class="flow-row">
+      <div class="flow-label">输入</div>
+      <div class="flow-copy"><div class="flow-copy-title">标题占位符</div><div class="flow-copy-sub">说明占位符</div></div>
+      <div class="flow-target">补充结果占位符</div>
+    </div>
+  </div>
+  <div class="result-panel">
+    <div class="result-panel__label">结果示例</div>
+    <table class="result-table"><tr><th>项目</th><th>示例</th><th>状态</th></tr></table>
+  </div>
+</div>
+```
+
+没有额外说明时使用 `.flow-layout--compact`；需要更大的上下间距时使用 `.flow-layout--spacious`。
+
+#### 结构布局
+
+`.structure-grid` + `.structure-card` 用于并列展示两个结构模块。卡片内部的流程图使用 `.structure-flow`，输入、输出和信号说明使用 `.structure-line`。第二个卡片可加 `.structure-card--gold`，但文字内容仍应保持通用。
+
+#### 方法与结果
+
+`.method-layout` 是“左侧步骤 + 右侧结果”的布局。左侧使用 `.method-panel`、`.panel-heading`、`.panel-note`、`.method-flow`、`.method-row`、`.method-row-label`、`.method-row-copy`、`.method-row-target`；右侧使用 `.comparison-panel` 和 `.result-table`。`.method-row--gold` 用于第二个步骤的颜色强调。
+
+### 5. 表格
+
+#### 双栏表格页
+
+`.table-layout` 默认是两列。每列可以放入 `.table-card`，标题使用 `.table-card-title`，补充规则使用 `.table-rule`，页尾说明使用 `.table-conclusion`。
+
+```html
+<div class="table-layout">
+  <div class="table-card">
+    <div class="table-card-title">表格标题</div>
+    <table class="comparison-table">
+      <thead><tr><th>项目</th><th>选项 A</th><th>选项 B</th></tr></thead>
+      <tbody><tr><td>条目</td><td>内容</td><td>结果</td></tr></tbody>
+    </table>
+  </div>
+  <div class="table-card table-card--accent">
+    <div class="table-card-title">说明标题</div>
+    <div class="table-rule"><b>规则</b><span>说明占位符。</span></div>
+  </div>
+</div>
+```
+
+#### 全宽表格
+
+需要横跨整页时，在 `.table-layout` 上增加 `.table-layout--full`，并直接放置 `.comparison-table` 或 `.result-table`，不要再套 `.table-card`：
+
+```html
+<div class="table-layout table-layout--full">
+  <table class="comparison-table">
+    <caption>全宽信息对比示例</caption>
+    <thead><tr><th>项目</th><th>维度</th><th>方案 A</th><th>方案 B</th></tr></thead>
+    <tbody><tr><td>条目 A</td><td>维度占位符</td><td>内容占位符</td><td>结果占位符</td></tr></tbody>
+  </table>
+</div>
+```
+
+#### 状态颜色
+
+`.result-table` 和 `.comparison-table` 默认使用统一的蓝灰分隔线和交替底色。结果状态只在需要时加到最后一列：
+
+```html
+<td class="table-status-cell table-status-cell--green"><span>完成</span></td>
+<td class="table-status-cell table-status-cell--gold"><span>待确认</span></td>
+<td>普通状态</td>
+```
+
+普通状态直接使用 `<td>`，不要添加 `--plain`。绿色或金色会填满对应单元格，表格分隔线仍保持中性颜色。
+
+### 6. 共同规则
+
+- 颜色修饰统一使用 `--gold`、`--green`、`--accent` 后缀；不需要强调色时使用基础 class。
+- 网格容器已经处理 `min-width: 0`、自动列宽和等高，不要给卡片写固定宽度或固定位置。
+- 图片放入 `assets/` 后使用相对路径；在线预览和 PDF 导出都从同一目录读取。
+- 页面内容过多时优先拆页，不要继续缩小字号或强行增加卡片数量。
+- `main.md` 中的示例文字都是占位符，正式使用时只替换内容，不要删除承载布局的外层 class。
 
 ## 文件说明
 
 - `main.md`：完整的容器用法示例和占位文案。
-- `custom.css`：按页面框架、信息、卡片、媒体、流程、表格和验证分组的样式。
+- `custom.css`：按页面框架、信息、卡片、媒体、流程、表格和方法展示分组的样式。
 - `template.html`：reveal-md 的 HTML 模板和初始化配置。
 - `assets/`：logo、占位图片和示例 SVG。
 - `Makefile`：预览、静态构建和 PDF 导出入口。

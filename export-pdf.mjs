@@ -10,7 +10,7 @@ const siteDir = join(root, 'site');
 const tempDir = join(root, '.pdf-export');
 const shotDir = join(tempDir, 'shots');
 const mergeScript = join(tempDir, 'merge_pdf.py');
-const outputPdf = resolve(root, '..', 'interview presentation.pdf');
+const outputPdf = resolve(root, '..', 'zju-reveal-md-template.pdf');
 const width = 1200;
 const height = 700;
 
