@@ -1,4 +1,5 @@
 .PHONY: live build pdf pdf-raster clean ensure-deps
+.DEFAULT_GOAL := live
 
 TEMPLATE_ROOT := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
